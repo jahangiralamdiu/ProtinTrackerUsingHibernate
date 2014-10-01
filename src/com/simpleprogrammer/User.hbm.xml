@@ -20,5 +20,16 @@
             <column name="goal"/>
         </property>
         </component>
+        <set name="histories" table="user_histories">
+            <key column="id"/>
+            <composite-element class="com.simpleprogrammer.UserHistory">
+                <property name="entryTime" type="java.util.Date">
+                    <column name="entry_time"/>
+                </property>
+                <property name="entry" type="java.lang.String">
+                    <column name="entry"/>
+                </property>
+            </composite-element>
+        </set>
     </class>
 </hibernate-mapping>

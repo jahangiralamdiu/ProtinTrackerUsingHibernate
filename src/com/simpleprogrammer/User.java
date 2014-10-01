@@ -1,5 +1,8 @@
 package com.simpleprogrammer;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by lenovo on 01/10/2014.
  */
@@ -7,6 +10,16 @@ public class User {
     private int id;
     private String name;
     private ProtinData protinData = new ProtinData();
+
+    private Set<UserHistory> histories = new HashSet<UserHistory>();
+
+    public Set<UserHistory> getHistories() {
+        return histories;
+    }
+
+    public void setHistories(Set<UserHistory> histories) {
+        this.histories = histories;
+    }
 
     public ProtinData getProtinData() {
         return protinData;
