@@ -6,8 +6,15 @@ package com.simpleprogrammer;
 public class User {
     private int id;
     private String name;
-    private int total;
-    private int goal;
+    private ProtinData protinData = new ProtinData();
+
+    public ProtinData getProtinData() {
+        return protinData;
+    }
+
+    public void setProtinData(ProtinData protinData) {
+        this.protinData = protinData;
+    }
 
     public int getId() {
         return id;
@@ -23,21 +30,5 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
-    public int getGoal() {
-        return goal;
-    }
-
-    public void setGoal(int goal) {
-        this.goal = goal;
     }
 }

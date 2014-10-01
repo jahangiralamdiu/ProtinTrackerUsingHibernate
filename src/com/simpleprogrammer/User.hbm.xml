@@ -12,11 +12,13 @@
         <property name="name" type="java.lang.String">
             <column name="name"/>
         </property>
+        <component name="protinData">
         <property name="total" type="int">
             <column name="total"/>
         </property>
         <property name="goal" type="int">
             <column name="goal"/>
         </property>
+        </component>
     </class>
 </hibernate-mapping>
