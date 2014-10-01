@@ -16,13 +16,18 @@ public class HibernateUtilities {
 
     static {
         try {
-            Configuration configuration = new Configuration().configure();
+            Configuration configuration = new Configuration().configure("/hibernet.cfg.xml");
             StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().
                     applySettings(configuration.getProperties());
-            SessionFactory factory = configuration.buildSessionFactory(builder.build());
+            sessionFactory = configuration.buildSessionFactory(builder.build());
 
-        } catch (HibernateException hx) {
-
+        } catch (HibernateException hx)
+        {
+            System.out.println("Problem in creating session Factory" + hx);
         }
+    }
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 }
